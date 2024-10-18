@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            mode: 'jit',
+            theme: {
+                extend: {
+                    animation: {
+                        marquee: 'marquee 25s linear infinite',
+                        marquee2: 'marquee2 25s linear infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        },
+                        marquee2: {
+                            '0%': { transform: 'translateX(100%)' },
+                            '100%': { transform: 'translateX(0%)' },
+                        },
+                    },
+                },
+            },
+            variants: {},
+            plugins: [],
+        }
+    </script>
+</head>
+
+<body class="max-w-7xl mx-auto px-5 bg-gray-900 text-white">
+
+    <div class="relative flex overflow-x-hidden">
+        <div class="py-5 animate-marquee whitespace-nowrap">
+            <span class="text-sm mx-4">Local Storage</span>
+            <span class="text-sm mx-4">HTML</span>
+            <span class="text-sm mx-4">CSS</span>
+            <span class="text-sm mx-4">JavaScript</span>
+            <span class="text-sm mx-4">ES6</span>
+            <span class="text-sm mx-4">React</span>
+            <span class="text-sm mx-4">Tailwind CSS</span>
+            <span class="text-sm mx-4">API</span>
+            <span class="text-sm mx-4">Template String</span>
+            <span class="text-sm mx-4">Functions</span>
+        </div> 
+        <div class="py-5 animate-marquee whitespace-nowrap">
+            <span class="text-sm mx-4">Local Storage</span>
+            <span class="text-sm mx-4">HTML</span>
+            <span class="text-sm mx-4">CSS</span>
+            <span class="text-sm mx-4">JavaScript</span>
+            <span class="text-sm mx-4">ES6</span>
+            <span class="text-sm mx-4">React</span>
+            <span class="text-sm mx-4">Tailwind CSS</span>
+            <span class="text-sm mx-4">API</span>
+            <span class="text-sm mx-4">Template String</span>
+            <span class="text-sm mx-4">Functions</span>
+        </div>
+    </div>
+
+    <h1 class="text-center text-4xl my-10 font-bold">Local Storage Cart 🛒</h1>
+    <p class="text-gray-400 mb-5 text-center max-w-4xl mx-auto"><strong>Local Storage Cart</strong> is a
+        beginner-friendly project that lets users add, update, and remove items from a shopping cart using browser local
+        storage. It demonstrates basic JavaScript and DOM manipulation skills. 😁</p>
+
+    <div class="flex flex-col gap-3 max-w-md justify-center mx-auto">
+        <input type="text" class="border rounded-lg px-4 py-2 bg-transparent" placeholder="Enter Product Name"
+            id="product-name">
+        <input type="text" class="border rounded-lg px-4 py-2 bg-transparent" placeholder="Enter product Quantity"
+            id="product-quantity">
+
+        <button class="px-8 py-2 border bg-green-700 rounded-lg text-white" onclick="addProduct()">Add Product</button>
+    </div>
+    <hr class="mt-10">
+
+    <div id="product-container" class="py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+
+    </div>
+
+    <script src="./cart.js"></script>
+</body>
+
+</html>
